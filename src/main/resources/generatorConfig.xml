@@ -48,9 +48,19 @@
 
 
         <!--要根据哪张表生成，要在这里配置-->
-        <!--用百分号表示生成所有表,可以直接省去一个一个写 <table tableName="%" /> -->
-        <table tableName="user" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"/>
+        <!--用百分号表示生成所有表,可以直接省去一个一个写 <table tableName="%" /> tableName="user" 如果不指定类名，则使用表名首字母大写-->
+<!--        <table tableName="user"-->
+<!--               enableCountByExample="false" enableUpdateByExample="false"-->
+<!--               enableDeleteByExample="false" enableSelectByExample="false"-->
+<!--               selectByExampleQueryId="false"/>-->
 
+        <!-- 要生成的表配置，可以多个 tableName：表名 domainObjectName：指定类名 -->
+        <table tableName="user" domainObjectName="Users"
+               enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true" />
+        </table>
 
     </context>
 </generatorConfiguration>
