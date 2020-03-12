@@ -10,8 +10,8 @@
     <!--中文：http://mbg.cndocs.tk/-->
 
 
-    <!--添加你本地的驱动jar-->
-    <classPathEntry location="/Users/hanqf/maven_repository/mysql/mysql-connector-java/5.1.21/mysql-connector-java-5.1.21.jar"/>
+    <!--在插件里引入即可，这里不需熬引入-->
+<!--    <classPathEntry location="/Users/hanqf/maven_repository/mysql/mysql-connector-java/5.1.21/mysql-connector-java-5.1.21.jar"/>-->
 
     <context id="context" targetRuntime="MyBatis3">
 
